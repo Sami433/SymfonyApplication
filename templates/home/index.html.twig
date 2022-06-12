@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+   
+    <div class="carousel-inner">
+    <div class="overlay-image" style="background-image: url('images/slide.jpg');"></div>
+    
+      <div class="carousel-item active">
+      
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Inscription</a></p>
+          </div>
+        </div>
+      </div>
+     
+        </div>
+      </div>
+    
+ 
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+    <div class="row">
+      <div class="col-lg-4">
+       <img loading= "lazy" width ="320" height="180" src="{{asset ('images/illustration-1.png')}}"/>
+       <h2 class="fw-bold">Heading</h2>
+        <p class="text-start">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+      
+      </div><!-- /.col-lg-4 -->
+
+
+      <div class="col-lg-4">
+         <img loading= "lazy" width ="320" height="180" src="{{asset ('images/illustration-2.png')}}"/>
+        <h2 class="fw-bold">Heading</h2>
+       <p class="text-start">Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+      
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+      <img loading= "lazy" width ="320" height="180" src="{{asset ('images/illustration-3.png')}}"/>
+        <h2 class="fw-bold">Heading</h2>
+        <p class="text-start">And lastly this, the third column of representative placeholder content.</p>
+      
+      </div><!-- /.col-lg-4 -->
+
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+    <section class="col col-lg-10 mx-auto mb-5">
+            <div class="card" id="shortenCard">
+                <div class="card-body bg-light">
+                    <form id="shortenForm">
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg" name="url" id="url" placeholder="Votre adresse à réduire" autocomplete="off" required>
+                                <button type="submit" class="btn btn-lg btn-success" id="btnShortenUrl">Réduire l'URL</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+{% endblock %}
+
+ {% block javascripts %}
+            {{ encore_entry_script_tags('home') }}
+        {% endblock %}
